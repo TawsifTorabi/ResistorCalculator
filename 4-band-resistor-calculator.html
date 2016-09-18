@@ -1,0 +1,226 @@
+﻿<html>
+<!--developed by tawsif torabi & MH Kamol
+(www.blogger-tawsif.ga)
+(facebook.com/bloggertawsif)
+(facebook.com/tawsif.torabi)
+(facebook.com/mak.phtml)
+(blog.grplusbd.net)-->
+
+<head>
+	<title>4 Bands Resistor Calculator</title>
+	<link href='icon.ico' rel='icon' type='image/x-icon'/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+		<meta charset='utf-8'/>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+		<meta content='GR+' name='generator'/>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+		<link href='http://app.grplusbd.net/' rel='openid.delegate'/>
+		<link href='http://app.grplusbd.net/' rel='canonical'/>
+		<meta content='6 Bands Resistor Calculator' name='description'/>
+		<meta content='Resistor, Responsibility, Resistor Value, Resistance, Resistor Calculator, 4 Bands, 4 bands resistor calculator, all about resistor' name='keywords'/>
+		<link href='https://plus.google.com/TawsifTorabi/posts' rel='publisher'/>
+		<link href='https://plus.google.com/TawsifTorabi/about' rel='author'/>
+		<link href='https://plus.google.com/TawsifTorabi' rel='me'/>
+		<meta content='Tawsif Torabi' name='Author'/>
+		<meta content='general' name='rating'/>
+		<meta content='english' name='language'/>
+		<meta content='https://www.facebook.com/tawsif.torabi' property='article:author'/>
+		<meta content='https://www.facebook.com/tawsif.torabi' property='article:publisher'/>
+		<meta content='@TawsifTorabi' name='twitter:site'/>
+		<meta content='@TawsifTorabi' name='twitter:creator'/>	
+	
+	
+	<noscript>
+		<meta http-equiv="refresh" content="0;URL='noscript.html'">
+	</noscript>
+</head>
+
+
+<body onload="calculate()">
+	<div id="floatnav">
+		<span class="title">
+			<div class="imgcont"><img src="img/logo.jpg" alt="Resistor Calculator" height="30px" width="30px" style="vertical-align: middle;"></div>
+			Resistor Calculator <br class="rwd-break" /><br class="rwd-break" />
+			<small style="font-size: 12px;">Beta v1.0</small>
+		</span>
+		
+		<div class="ankornav">
+			<a class="nav" href="index.html">Home</a>
+			<br class="rwd-break" />
+			<br class="rwd-break" />
+			<a class="nav active" href="#">4 Bands</a>
+			<br class="rwd-break" />
+			<br class="rwd-break" />
+			<a class="nav" href="5-band-resistor-calculator.html">5 Bands</a>
+			<br class="rwd-break" />
+			<br class="rwd-break" />
+			<a class="nav" href="6-band-resistor-calculator.html">6 Bands</a>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	<div class="clear"></div>
+	<div class="clear"></div>
+	<br class="rwd-break" />
+	<br class="rwd-break" />
+	<br class="rwd-break" />
+	<br class="rwd-break" />
+	<br class="rwd-break" />
+	
+	<center>
+	
+
+<div class="container">
+		<h1>4 Bands Calculator</h1>
+		
+		<div class="printer">
+		
+			</br>
+			</br>
+
+			<canvas class="canvas-wire metal linear" width="100px" height="5px"></canvas>
+
+			<canvas class="canvas-film-1" width="20px" height="30px"></canvas>
+
+			<canvas id="canvas-band1" width="7px" height="30px" style="background-color: red; vertical-align: middle;"></canvas>
+
+			<canvas class="canvas-film-mid" width="20px" height="30px"></canvas>
+
+			<canvas id="canvas-band2" width="7px" height="30px" style="background-color: red; vertical-align: middle;"></canvas>
+
+			<canvas class="canvas-film-mid" width="20px" height="30px"></canvas>
+
+			<canvas id="canvas-band3" width="7px" height="30px" style="background-color: red; vertical-align: middle;"></canvas>
+
+			<canvas class="canvas-film-mid" width="20px" height="30px"></canvas>
+
+			<canvas id="canvas-band4" width="7px" height="30px" style="background-color: red; vertical-align: middle;"></canvas>
+
+			<canvas class="canvas-film-2" width="20px" height="30px"></canvas>
+
+			<canvas class="canvas-wire metal linear" width="100px" height="5px"></canvas>
+			
+			</br>
+			</br>
+			
+			<h2 id="printtxt" style="color: white; font-family: roboto;">Value is 2.2k Ω 2%</h2>
+
+		</div>
+
+</br>
+
+
+<table border="0" id="resistor-color-select">
+    <tbody>
+        <tr>
+            <td colspan="5"><h2 style="font-family: arial;">Select Color of Bands To Get Value of Resistor:</h2></td>
+        </tr>
+        <tr>
+            <td>
+            <select style="color: #000000; background-color: #ff0000; color: white;" name="Color1" size="1" id="one" onchange="simulatefour(); calculate(); this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color">
+            <option value="" style="color: #000000; background-color: transparent;">Blank
+            <option value="1" style="color: #ffffff; background-color: #a52a2a;">Brown
+            <option value="2" selected="selected" style="color: #ffffff; background-color: red;">Red
+            <option value="3" style="color: #000000; background-color: orange;">Orange
+            <option value="4" style="color: #000000; background-color: yellow;">Yellow
+            <option value="5" style="color: #ffffff; background-color: green;">Green
+            <option value="6" style="color: #ffffff; background-color: blue;">Blue
+            <option value="7" style="color: #ffffff; background-color: #ee82ee;">Violet
+            <option value="8" style="color: #ffffff; background-color: gray;">Grey
+            <option value="9" style="color: #000000; background-color: #ffffff;">White
+            </select>
+            </td>
+            <td>
+            <select style="color: #000000; background-color: #ff0000; color: white;" name="Color2" size="1" onchange="simulatefour(); calculate(); this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="two">
+            <option value="" style="color: #000000; background-color: transparent;">Blank
+            <option value="0" style="color: #ffffff; background-color: #000000;">Black
+            <option value="1" style="color: #ffffff; background-color: #a52a2a;">Brown
+            <option value="2" selected="selected" style="color: #ffffff; background-color: red;">Red
+            <option value="3" style="color: #000000; background-color: orange;">Orange
+            <option value="4" style="color: #000000; background-color: yellow;">Yellow
+            <option value="5" style="color: #ffffff; background-color: green;">Green
+            <option value="6" style="color: #ffffff; background-color: blue;">Blue
+            <option value="7" style="color: #ffffff; background-color: #ee82ee;">Violet
+            <option value="8" style="color: #ffffff; background-color: gray;">Grey
+            <option value="9" style="color: #000000; background-color: #ffffff;">White
+            </select>
+            </td>
+            <td>
+            <select style="color: #000000; background-color: #ff0000; color: white;" name="Multiplier" size="1" onchange="simulatefour(); calculate(); this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="four">
+            <option value="" style="color: #000000; background-color: transparent;">Blank
+            <option value="100" style="color: #ffffff; background-color: black;">Black
+            <option value="1000" style="color: #ffffff; background-color: #a52a2a;">Brown
+            <option value="10000" selected="selected" style="color: #ffffff; background-color: red;">Red
+            <option value="100000" style="color: #000000; background-color: orange;">Orange
+            <option value="1000000" style="color: #000000; background-color: yellow;">Yellow
+            <option value="10000000" style="color: #ffffff; background-color: green;">Green
+            <option value="100000000" style="color: #ffffff; background-color: blue;">Blue
+            <option value="10" style="color: #000000; background-color: #ffd700;">Golden
+            <option value="1" style="color: #000000; background-color: silver;">Silver
+            </select>
+            </td>
+            <td>
+            <select style="color: #000000; background-color: #ff0000; color: white;" name="Tolerance" size="1" onchange="simulatefour(); calculate(); this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="five">
+            <option value="" style="color: #000000; background-color: transparent;">Blank
+            <option value="1%" style="color: #ffffff; background-color: #a52a2a;">Brown
+            <option value="2%"selected="selected" style="color: #ffffff; background-color: red;">Red
+            <option value="5%" style="color: #000000; background-color: #ffd700;">Golden
+            <option value="10%" style="color: #000000; background-color: silver;">Silver
+            </select>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<select name="Color3" size="1" onchange="calculate(); this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="three" style="display: none; color: #000000; background-color: #ffffff;">
+<option value="" style="color: #000000; background-color: transparent;">Blank
+<option value="0" style="color: #ffffff; background-color: #000000;">Black
+<option value="1" style="color: #ffffff; background-color: #a52a2a;">Brown
+<option value="2" selected="selected" style="color: #ffffff; background-color: red;">Red
+<option value="3" style="color: #000000; background-color: orange;">Orange
+<option value="4" style="color: #000000; background-color: yellow;">Yellow
+<option value="5" style="color: #ffffff; background-color: green;">Green
+<option value="6" style="color: #ffffff; background-color: blue;">Blue
+<option value="7" style="color: #ffffff; background-color: #ee82ee;">Violet
+<option value="8" style="color: #ffffff; background-color: gray;">Grey
+<option value="9" style="color: #000000; background-color: #ffffff;">White
+</select>
+<select name="TC" size="1" onchange="calculate(); this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor, this.style.color=this.options[this.selectedIndex].style.color" id="six" style="display: none; color: #000000; background-color: #ffffff;">
+<option value="" style="color: #000000; background-color: transparent;">Blank
+<option value="100ppm" style="color: #ffffff; background-color: #a52a2a;">Brown
+<option value="" selected="selected" style="color: #ffffff; background-color: red;">Red
+<option value="15ppm" style="color: #000000; background-color: orange;">Orange
+<option value="25ppm" style="color: #000000; background-color: yellow;">Yellow
+<option value="10ppm" style="color: #ffffff; background-color: blue;">Blue
+<option value="5ppm" style="color: #ffffff; background-color: #ee82ee;">Violet
+</select>
+<br>
+
+	<p>Resistor Value:
+	<input type="text" size="30" name="keywords" id="print" value="2.2k Ω 2%">
+	</p>
+
+`</div>
+</center>
+
+
+
+
+
+
+    <!-- Load Main Script -->
+	<script src="4bands.js" type="text/javascript"></script>
+	<script src="simulate.js" type="text/javascript"></script>
+
+
+<div class="clear"></div>
+
+			<div class='copyright'>
+			<div><b><h4>© <a class='copyright' href="http://facebook.com/tawsif.torabi" target="_blank">Tawsif Torabi</a> & <a class='copyright' href="http://facebook.com/mak.phtml" target="_blank">Mahmuduzzaman</a></h4></b></div>
+			</div>
+			
+			
+			<!--Blog Badge Generated Using app.grplusbd.net/blog-badge-generator coded by fb.com/tawsif.torabi blog.grplusbd.net--><div id="grplusbd_floating_likebox" style="position: fixed; bottom: 0px; right: 0px; border-radius: 30px 0px 0px; padding: 10px 15px; box-shadow: black 1px 1px 7px; z-index: 999; background-color: rgb(20, 137, 219);"><span id="iconContainer" style="border-radius: 50px; display: inline-block; overflow: hidden; vertical-align: middle;"><img id="ico" style="vertical-align:middle;	height: 45px; width: auto;" onerror="this.src='error.png'; this.style.backgroundColor = 'white'; imageerror();" src="http://lh3.googleusercontent.com/-jpijNi_XBh4/AAAAAAAAAAI/AAAAAAAAB_0/P3R_olWI_KI/s512-c/photo.jpg"></span><iframe id="floatfollow" allowtransparency="true" frameborder="0" height="50" scrolling="no" src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Ftawsif.torabi&width=64&height=65&layout=box_count&size=small&show_faces=true&appId=164293520647951" style="border:none;overflow:hidden; vertical-align: middle; float: right;" width="64"></iframe><br><span id="name" style="font-weight: bold; color: rgb(255, 255, 255); font-family: arial;">Tawsif Torabi</span><br><small id="job" style="font-weight: bold; color: white; font-family:arial;">Web Developer, GR+ Bangladesh</small></div>
+			
+</body>
+</html>
