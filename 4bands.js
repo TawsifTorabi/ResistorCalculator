@@ -25,3 +25,4 @@ function calculate(Form) {
   document.getElementById('print').value = result;
   document.getElementById('printtxt').innerHTML = 'Value is ' +result;
 }
+
